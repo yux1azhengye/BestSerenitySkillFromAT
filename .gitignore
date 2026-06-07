@@ -19,6 +19,25 @@ xvhaoran778-cyber-Serenity-SKILL/
 *-retry*/
 *-retry2*/
 
+# Python
+*.pyc
+*.pyo
+__pycache__/
+.venv/
+venv/
+*.egg-info/
+
+# Node.js
+node_modules/
+
+# Database files
+*.sqlite
+*.db
+
+# Environment / secrets
+.env
+.env.*
+
 # Temporary files
 *.zip
 *.tmp

@@ -688,4 +688,8 @@ MIT — 随便用，随便改，随便造。
 
 ---
 
-*本文档于2026年6月6日完成，整合自8个成功获取的GitHub仓库 (yan-labs和Oxagata-prog未能获取)*
+> **v3.0 模块化版本已发布**: 推荐使用 `skills/serenity-unified/SKILL.md` (核心指令 ~200 行 + knowledge/ + templates/ 子目录)，包含工作流精简、判据合并、量化门槛、A 股取数纪律等改进。本文件为 v2.0 存档版。
+
+---
+
+*本文档于 2026 年 6 月 6 日完成，整合自 10 个 GitHub 仓库。v3.0 模块化版本见 `skills/serenity-unified/`*
