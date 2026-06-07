@@ -36,10 +36,11 @@
 ```
 BestSerenitySkillFromAT/
 ├── README.md                          # 本文件
+├── SKILL.md                           # v3.0 Skill 入口 (各平台一行安装)
 ├── FINAL_UNIFIED_SKILL.md             # v2.0 存档版 Skill (单文件)
 ├── LICENSE                            # MIT
 │
-├── skills/serenity-unified/           # v3.0 模块化 Skill (推荐使用)
+├── skills/serenity-unified/           # v3.0 模块化 Skill
 │   ├── SKILL.md                       #   核心指令 (~200 行)
 │   ├── knowledge/                     #   参考知识库
 │   │   ├── market-adaptation.md       #     A 股/美股/全球市场适配
@@ -61,7 +62,8 @@ BestSerenitySkillFromAT/
 
 ## 核心文档
 
-- [skills/serenity-unified/SKILL.md](./skills/serenity-unified/SKILL.md) — **v3.0 模块化 Skill (推荐使用)**，核心指令 ~200 行 + 知识库 + 模板
+- [SKILL.md](./SKILL.md) — **v3.0 Skill (推荐使用)**，根目录入口，各平台一行安装
+- [skills/serenity-unified/](./skills/serenity-unified/) — 模块化结构 (核心指令 + knowledge/ + templates/)
 - [FINAL_UNIFIED_SKILL.md](./FINAL_UNIFIED_SKILL.md) — v2.0 存档版 (单文件 691 行)
 - [docs/ANALYSIS_SUMMARY.md](./docs/ANALYSIS_SUMMARY.md) — 10 仓库逐一深度分析、核心差异矩阵、关键洞察
 - [docs/DEEP_OPTIMIZATION_REPORT.md](./docs/DEEP_OPTIMIZATION_REPORT.md) — 三种演化路径、四代防幻觉机制等独立分析
@@ -70,23 +72,32 @@ BestSerenitySkillFromAT/
 
 ## 快速开始
 
-### 直接使用终极 Skill (v3.0 推荐)
+### 一行安装
+
+根据你的 Agent 工具，选一条命令执行即可：
 
 ```bash
-# Codex
-cp -r skills/serenity-unified/ ~/.codex/skills/serenity-unified/
+# Codex — 告诉 Codex:
+"帮我从 GitHub 拉取 yux1azhengye/BestSerenitySkillFromAT 并把根目录的 SKILL.md 安装为 skill"
 
-# Claude Code
-cp -r skills/serenity-unified/ ~/.claude/skills/serenity-unified/
+# skills.sh (Claude Code / Codex 通用)
+npx skills add yux1azhengye/BestSerenitySkillFromAT
 
-# Cursor → 复制 SKILL.md 到 .cursor/rules/serenity-unified.mdc
+# Claude Code (手动)
+git clone https://github.com/yux1azhengye/BestSerenitySkillFromAT.git /tmp/serenity && cp /tmp/serenity/SKILL.md CLAUDE.md
+
+# Cursor
+git clone https://github.com/yux1azhengye/BestSerenitySkillFromAT.git /tmp/serenity && cp /tmp/serenity/SKILL.md .cursor/rules/serenity-unified.mdc
+
+# Gemini CLI
+git clone https://github.com/yux1azhengye/BestSerenitySkillFromAT.git /tmp/serenity && cp /tmp/serenity/SKILL.md GEMINI.md
 ```
 
-触发示例：
+### 触发示例
 
 ```
-/serenity-unified 分析一下 $NVDA 这只票值不值得
-/serenity-unified 帮我看 1.6T 光模块这条链现在还有没有没被定价的卡点
+/serenity 分析一下 $NVDA 这只票值不值得
+帮我用 Serenity 的方式看 1.6T 光模块这条链还有没有没被定价的卡点
 用 Serenity 的方式看 A 股 AI 半导体哪个最值得研究
 ```
 
