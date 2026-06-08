@@ -80,11 +80,11 @@ BestSerenitySkillFromAT/
 # Codex — 告诉 Codex:
 "帮我从 GitHub 拉取 yux1azhengye/BestSerenitySkillFromAT 并把根目录的 SKILL.md 安装为 skill"
 
-# skills.sh (Claude Code / Codex 通用)
+# skills.sh (Codex 通用)
 npx skills add yux1azhengye/BestSerenitySkillFromAT
 
-# Claude Code (手动)
-git clone https://github.com/yux1azhengye/BestSerenitySkillFromAT.git /tmp/serenity && cp /tmp/serenity/SKILL.md CLAUDE.md
+# Claude Code (全局，任意目录可用)
+git clone https://github.com/yux1azhengye/BestSerenitySkillFromAT.git ~/.claude/skills/serenity-unified-skill
 
 # Cursor
 git clone https://github.com/yux1azhengye/BestSerenitySkillFromAT.git /tmp/serenity && cp /tmp/serenity/SKILL.md .cursor/rules/serenity-unified.mdc
